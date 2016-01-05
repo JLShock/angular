@@ -3,21 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Building a store with AngularJS!</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
 </head>
 <body ng-controller="StoreController as store">
 	<h1>{{ "Hello" + " World!" }} Browse our special gem store!</h1>
-	<hr>
-	<div ng-hide="store.products[0].soldOut">
-		<h2>{{store.products[0].name}}</h2>
-		<h3>${{store.products[0].price}}</h3>
-		<h4>{{store.products[0].color}}</h4>
-		<p>{{store.products[0].description}}</p>
-		<button ng-show="store.products[0].canPurchase">Add to cart</button>
+	<div class="product" ng-hide="store.products[2].soldOut">
+		<h2>{{store.products[2].name}}</h2>
+		<h3>{{store.products[2].price | currency}}</h3>
+		<h4>{{store.products[2].color}}</h4>
+		<p>{{store.products[2].description}}</p>
+		<button ng-show="store.products[2].canPurchase">Add to cart</button>
 	</div>
-	<hr>
-	<div ng-repeat="product in store.products">
+	<div class="product" ng-repeat="product in store.products">
 		<h2>{{product.name}}</h2>
-		<h3>${{product.price}}</h3>
+		<h3>{{product.price | currency}}</h3>
 		<h4>{{product.color}}</h4>
 		<p>{{product.description}}</p>
 		<button ng-show="product.canPurchase">Add to cart</button>

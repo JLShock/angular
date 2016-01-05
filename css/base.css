@@ -1,0 +1,24 @@
+html,
+body,
+ul,
+ol {
+	margin: 0;
+	padding: 0 25px;
+	font: Helvetica, sans-serif;
+	color: #333;
+}
+
+h1 {
+	padding: 20px;
+	text-align: center;
+	background-color: black;
+	color: white;
+}
+
+.product {
+	border-bottom: 1px solid black;
+}
+
+button {
+	margin-bottom: 10px;
+}

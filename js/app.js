@@ -9,7 +9,7 @@
 	var gems = [
 		{
 			name: 'Skywalker',
-			price: 5.95,
+			price: 5,
 			color: 'Green',
 			description: "The Skywalker gem is known to have special tactical powers.",
 			canPurchase: true,
@@ -25,7 +25,7 @@
 		},
 		{
 			name: 'Obi',
-			price: 7.95,
+			price: 7,
 			color: 'Blue',
 			description: "The Obi gem is known to have special mind reading powers.",
 			canPurchase: true,
