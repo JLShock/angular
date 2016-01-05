@@ -14,6 +14,7 @@
 			description: "The Skywalker gem is known to have special tactical powers.",
 			canPurchase: true,
 			soldOut: false,
+			image: 'http://www.jewelrynotes.com/jn/wp-content/uploads/2012/08/emerald-gemstone-300x200.jpg',
 		},
 		{
 			name: 'Vader',
@@ -22,6 +23,7 @@
 			description: "The Vader gem is known to have special strength powers.",
 			canPurchase: true,
 			soldOut: false,
+			image: 'http://www.catzia.com/SMCosplay-RedGemBrooch.jpg',
 		},
 		{
 			name: 'Obi',
@@ -30,6 +32,7 @@
 			description: "The Obi gem is known to have special mind reading powers.",
 			canPurchase: true,
 			soldOut: false,
+			image: 'http://gemstoneguru.com/wp-content/uploads/2013/04/Tanzanite-Gemstone.png',
 		},
 	];
 

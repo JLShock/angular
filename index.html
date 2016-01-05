@@ -7,14 +7,20 @@
 </head>
 <body ng-controller="StoreController as store">
 	<h1>{{ "Hello" + " World!" }} Browse our special gem store!</h1>
-	<div class="product" ng-hide="store.products[2].soldOut">
-		<h2>{{store.products[2].name}}</h2>
-		<h3>{{store.products[2].price | currency}}</h3>
-		<h4>{{store.products[2].color}}</h4>
-		<p>{{store.products[2].description}}</p>
-		<button ng-show="store.products[2].canPurchase">Add to cart</button>
+	<div class="product" ng-hide="store.products[1].soldOut">
+		<div class="product-image">
+			<img src="{{store.products[1].image}}">
+		</div>
+		<h2>{{store.products[1].name}}</h2>
+		<h3>{{store.products[1].price | currency}}</h3>
+		<h4>{{store.products[1].color}}</h4>
+		<p>{{store.products[1].description}}</p>
+		<button ng-show="store.products[1].canPurchase">Add to cart</button>
 	</div>
-	<div class="product" ng-repeat="product in store.products">
+	<div class="product" ng-repeat="product in store.products | orderBy:'-price'">
+		<div class="product-image">
+			<img src="{{product.image}}">
+		</div>
 		<h2>{{product.name}}</h2>
 		<h3>{{product.price | currency}}</h3>
 		<h4>{{product.color}}</h4>
