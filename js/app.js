@@ -27,7 +27,7 @@
 		},
 		{
 			name: 'Obi',
-			price: 7,
+			price: 7.50,
 			color: 'Blue',
 			description: "The Obi gem is known to have special mind reading powers.",
 			canPurchase: true,

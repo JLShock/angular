@@ -4,7 +4,7 @@ ul,
 ol {
 	margin: 0;
 	padding: 0 25px;
-	font: Helvetica, sans-serif;
+	font-family: Helvetica, sans-serif;
 	color: #333;
 }
 
@@ -15,14 +15,46 @@ h1 {
 	color: white;
 }
 
+h1 em {
+	font-size: 12pt;
+	font-weight: lighter;
+	color: #e43137;
+}
+
+.angular-logo {
+	margin: 0 auto;
+	width: 75px;
+	height: 75px;
+	background: url(http://res.cloudinary.com/buddahbelly/image/upload/v1423072364/brilliantbritz/angular-js.png);
+	background-size: cover;
+}
+
 .product {
 	border-bottom: 1px solid black;
+	margin-bottom: 25px;
 }
+
+.product-info-container {
+	display: inline-flex;
+}
+
+.product-info {
+	margin-left: 25px;
+}
+
+.product-info h2 {
+	margin: 30px 0 0 0;
+}
+
+.product-info h4 {
+	margin-top: 10px;
+}
+
 
 .product-image {
 	margin-top: 10px;
-	height: 50px;
-	width: 50px;
+	height: 100px;
+	width: 100px;
 	background-color: lightgrey;
 }
 
