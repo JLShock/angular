@@ -5,12 +5,30 @@
 	<title>Building a store with AngularJS!</title>
 </head>
 <body ng-controller="StoreController as store">
-	<h1>{{ "Hello" + " World!" }}</h1>
-	<div ng-hide="store.product.soldOut">
-		<h1>{{store.product.name}}</h1>
-		<h2>${{store.product.price}}</h2>
-		<p>{{store.product.description}}</p>
-		<button ng-show="store.product.canPurchase">Add to cart</button>
+	<h1>{{ "Hello" + " World!" }} Browse our special gem store!</h1>
+	<hr>
+	<div ng-hide="store.products[0].soldOut">
+		<h2>{{store.products[0].name}}</h2>
+		<h3>${{store.products[0].price}}</h3>
+		<h4>{{store.products[0].color}}</h4>
+		<p>{{store.product[0].description}}</p>
+		<button ng-show="store.products[0].canPurchase">Add to cart</button>
+	</div>
+	<hr>
+	<div ng-hide="store.products[1].soldOut">
+		<h2>{{store.products[1].name}}</h2>
+		<h3>${{store.products[1].price}}</h3>
+		<h4>{{store.products[1].color}}</h4>
+		<p>{{store.product[1].description}}</p>
+		<button ng-show="store.products[1].canPurchase">Add to cart</button>
+	</div>
+	<hr>
+	<div ng-hide="store.products[2].soldOut">
+		<h2>{{store.products[2].name}}</h2>
+		<h3>${{store.products[2].price}}</h3>
+		<h4>{{store.products[2].color}}</h4>
+		<p>{{store.product[2].description}}</p>
+		<button ng-show="store.products[2].canPurchase">Add to cart</button>
 	</div>
 	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
