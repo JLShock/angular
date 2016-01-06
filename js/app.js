@@ -2,10 +2,12 @@
 
 	var app = angular.module('store', [ ]);
 
+	// Store Controller
 	app.controller('StoreController', function(){
 		this.products = gems;
 	});
 
+	// Array of Products
 	var gems = [
 		{
 			name: 'Skywalker',
@@ -87,6 +89,7 @@
 		},
 	];
 
+	// Tabbed Panel Controller
 	app.controller('PanelController', function(){
 		this.tab = 1;
 
@@ -96,6 +99,16 @@
 
 		this.isSelected = function (checkTab) {
 			return this.tab === checkTab;
+		}
+	});
+
+	// Review Controller
+	app.controller('ReviewController', function(){
+		this.review = {};
+
+		this.addReview = function(product) {
+			product.reviews.push(this.review);
+			this.review = {};
 		}
 	});
 

@@ -73,9 +73,13 @@ ul, li, blockquote {
 	list-style-type: none;
 }
 
+ul {
+	max-width: 482px;
+}
+
 li {
-	width: 145px;
 	display: inline-block;
+	width: 95px;
 	padding: 5px;
 	margin-right: 5px;
 	background-color: grey;
@@ -121,4 +125,34 @@ a, a:active, a:hover {
 
 .review cite {
 	font-size: 10pt;
+}
+
+.review-form {
+	padding: 10px;
+	max-width: 500px;
+	color: black;
+}
+
+.review-form select {
+	height: 25px;
+	width: 100px;
+	font-size: 12pt;
+	margin-bottom: 10px;
+}
+
+.review-form textarea {
+	min-height: 80px;
+	width: 99%;
+	margin-bottom: 10px;
+}
+
+input.review-author {
+	min-height: 25px;
+	min-width: 217px;
+	margin: 0 20px 10px 10px;
+}
+
+.submit-review {
+	min-height: 30px;
+	width: 130px;
 }
