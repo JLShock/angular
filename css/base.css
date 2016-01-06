@@ -95,11 +95,30 @@ a, a:active, a:hover {
 .panel {
 	margin: 10px 0;
 	padding: 20px;
-	width: 443px;
-	height: 90px;
+	max-width: 443px;
+	min-height: 90px;
 	background-color: whitesmoke;
 }
 
 .panel h3 {
 	margin-top: 0;
+}
+
+.review {
+	margin-bottom: 10px;
+	padding: 10px;
+	border-bottom: 1px solid black;
+}
+
+.review b {
+	color: #e43137;
+}
+
+.review p {
+	margin: 0;
+	padding: 0;
+}
+
+.review cite {
+	font-size: 10pt;
 }

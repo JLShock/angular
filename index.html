@@ -9,7 +9,7 @@
 
 	<h1>
 		<div class="angular-logo"></div>
-		{{ "Hello" + " World!" }} Browse our gem store!<br>
+		{{ "Hello" + " World!" }}<br>
 		<em>This special store was built with AngularJS</em>
 	</h1>
 
@@ -47,7 +47,13 @@
 			</div>
 			<div class="panel" ng-show="panel.isSelected(3)">
 				<h3>Reviews</h3>
-				<blockquote>None yet</blockquote>
+				<blockquote ng-repeat="review in product.reviews">
+					<div class="review">
+						<b>Stars: {{review.stars}}</b><br>
+						<p>{{review.body}}</p><br>
+						<cite>by: {{review.author}}</cite>
+					</div>
+				</blockquote>
 			</div>
 		</section>
 
