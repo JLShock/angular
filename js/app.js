@@ -1,6 +1,6 @@
 (function() {
 
-	var app = angular.module('store', [ ]);
+	var app = angular.module('store', ['store-products']);
 
 	// Array of Products
 	var gems = [
@@ -14,7 +14,7 @@
 			image: 'https://ezodiac.files.wordpress.com/2013/02/emerald-birthstones.jpg',
 			reviews: [
 				{
-					stars: 5,
+					stars: 4,
 					body: "This Skywalker gem is so cool!!!",
 					author: "john@gmail.com"
 				},
@@ -22,11 +22,6 @@
 					stars: 3,
 					body: "It was worth the purchase!",
 					author: "tom@yahoo.com"
-				},
-				{
-					stars: 2,
-					body: "This product does not look the same as online!",
-					author: "grumpy@firemail.com"
 				},
 			],
 		},
@@ -43,11 +38,6 @@
 					stars: 4,
 					body: "This product rocks!",
 					author: "tom@yahoo.com"
-				},
-				{
-					stars: 1,
-					body: "The gem looks orange not red!",
-					author: "grumpy@firemail.com"
 				},
 			],
 		},
@@ -101,34 +91,6 @@
 			product.reviews.push(this.review);
 			this.review = {};
 		}
-	});
-
-	app.directive('productInfo', function(){
-		return {
-			restrict: 'E',
-			templateUrl: 'product-info.html'
-		};
-	});
-
-	app.directive('productDescription', function(){
-		return {
-			restrict: 'E',
-			templateUrl: 'product-description.html'
-		};
-	});
-
-	app.directive('productSpecs', function(){
-		return {
-			restrict: 'E',
-			templateUrl: 'product-specs.html'
-		};
-	});
-
-	app.directive('productReviews', function(){
-		return {
-			restrict: 'E',
-			templateUrl: 'product-reviews.html'
-		};
 	});
 
 })();
