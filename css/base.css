@@ -84,6 +84,8 @@ li {
 	margin-right: 5px;
 	background-color: grey;
 	text-align: center;
+	font-size: 10pt;
+	font-weight: bolder;
 }
 
 .active {
@@ -155,4 +157,16 @@ input.review-author {
 .submit-review {
 	min-height: 30px;
 	width: 130px;
+}
+
+.ng-invalid.ng-dirty {
+	border-color: #FA787E;
+}
+
+.ng-valid.ng-dirty {
+	border-color: #78FA89;
+}
+
+.try {
+	background-color: red;
 }

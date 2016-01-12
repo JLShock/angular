@@ -1,4 +1,4 @@
-(function(){
+(function() {
 
 	var app = angular.module('store', [ ]);
 
@@ -46,11 +46,6 @@
 			reviews: [
 				{
 					stars: 4,
-					body: "The Vader gem is my favorite of them all!!!",
-					author: "john@gmail.com"
-				},
-				{
-					stars: 5,
 					body: "This product rocks!",
 					author: "tom@yahoo.com"
 				},
@@ -74,11 +69,6 @@
 					stars: 5,
 					body: "I swear it actually works!!!",
 					author: "john@gmail.com"
-				},
-				{
-					stars: 4,
-					body: "My kids loved this!",
-					author: "tom@yahoo.com"
 				},
 				{
 					stars: 2,
@@ -107,6 +97,7 @@
 		this.review = {};
 
 		this.addReview = function(product) {
+			this.review.createdOn = Date.now();
 			product.reviews.push(this.review);
 			this.review = {};
 		}
