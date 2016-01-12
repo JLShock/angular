@@ -140,6 +140,7 @@ a, a:active, a:hover {
 	width: 100px;
 	font-size: 12pt;
 	margin-bottom: 10px;
+	cursor: pointer;
 }
 
 .review-form textarea {
@@ -157,6 +158,11 @@ input.review-author {
 .submit-review {
 	min-height: 30px;
 	width: 130px;
+	cursor: pointer;
+}
+
+button {
+	cursor: pointer;
 }
 
 .ng-invalid.ng-dirty {
@@ -165,8 +171,4 @@ input.review-author {
 
 .ng-valid.ng-dirty {
 	border-color: #78FA89;
-}
-
-.try {
-	background-color: red;
 }

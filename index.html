@@ -7,11 +7,7 @@
 </head>
 <body ng-controller="StoreController as store">
 
-	<h1>
-		<div class="angular-logo"></div>
-		{{ "Hello" + " World!" }}<br>
-		<em>This special store was built with AngularJS</em>
-	</h1>
+	<header ng-include="'header.html'"></header>
 
 	<div class="product" ng-repeat="product in store.products | orderBy:'-price'">
 		
@@ -19,10 +15,7 @@
 			<div class="product-image">
 				<img ng-src="{{product.image}}">
 			</div>
-			<div class="product-info">
-				<h2>{{product.name}}</h2>
-				<h4>{{product.price | currency}}</h4>
-			</div>
+			<product-title></product-title>
 		</section>
 
 		<section ng-controller="PanelController as panel">
@@ -120,10 +113,15 @@
 		$('.form-author').on('click', function() {
 			$(this).parents('.review-block').children('.review-preview').removeClass('ng-hide');
 		});
-		
+
 		$('.submit-review').on('click', function() {
 			$(this).parents('.review-block').children('.review-preview').addClass('ng-hide');
 		});
+
+		$('form').on('focusout', function() {
+			$(this).parents('.review-block').children('.review-preview').addClass('ng-hide');
+		});
+
 	});
 </script>
 
