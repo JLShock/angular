@@ -16,7 +16,21 @@
 		
 		<section ng-controller="PanelController as panel">
 
-			<product-panels></product-panels>
+			<ul>
+
+				<a href ng-click="panel.selectTab(1)">
+					<li ng-class="{active:panel.isSelected(1)}">Description</li>
+				</a>
+
+				<a href ng-click="panel.selectTab(2)">
+					<li ng-class="{active:panel.isSelected(2)}">Specifications</li>
+				</a>
+
+				<a href ng-click="panel.selectTab(3)">
+					<li ng-class="{active:panel.isSelected(3)}">Reviews</li>
+				</a>
+	
+			</ul>
 			
 			<product-description></product-description>
 
