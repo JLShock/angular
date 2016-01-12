@@ -103,10 +103,31 @@
 		}
 	});
 
-	app.directive('productTitle', function(){
+	app.directive('productInfo', function(){
 		return {
 			restrict: 'E',
-			templateUrl: 'product-title.html'
+			templateUrl: 'product-info.html'
+		};
+	});
+
+	app.directive('productDescription', function(){
+		return {
+			restrict: 'E',
+			templateUrl: 'product-description.html'
+		};
+	});
+
+	app.directive('productSpecifications', function(){
+		return {
+			restrict: 'E',
+			templateUrl: 'product-specifications.html'
+		};
+	});
+
+	app.directive('productReviews', function(){
+		return {
+			restrict: 'E',
+			templateUrl: 'product-reviews.html'
 		};
 	});
 
