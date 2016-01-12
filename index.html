@@ -13,24 +13,14 @@
 	<div class="product" ng-repeat="product in store.products | orderBy:'-price'">
 
 		<product-info class="product-info-container"></product-info>
-
+		
 		<section ng-controller="PanelController as panel">
 
-			<ul>
-				<a href ng-click="panel.selectTab(1)">
-					<li ng-class="{active:panel.isSelected(1)}">Description</li>
-				</a>
-				<a href ng-click="panel.selectTab(2)">
-					<li ng-class="{active:panel.isSelected(2)}">Specifications</li>
-				</a>
-				<a href ng-click="panel.selectTab(3)">
-					<li ng-class="{active:panel.isSelected(3)}">Reviews</li>
-				</a>
-			</ul>
+			<product-panels></product-panels>
 			
 			<product-description></product-description>
 
-			<product-specifications></product-specifications>
+			<product-specs></product-specs>
 
 			<product-reviews></product-reviews>
 

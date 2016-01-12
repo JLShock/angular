@@ -2,11 +2,6 @@
 
 	var app = angular.module('store', [ ]);
 
-	// Store Controller
-	app.controller('StoreController', function(){
-		this.products = gems;
-	});
-
 	// Array of Products
 	var gems = [
 		{
@@ -16,7 +11,7 @@
 			description: "The Skywalker gem is known to have special tactical powers.",
 			canPurchase: true,
 			soldOut: false,
-			image: 'http://www.jewelrynotes.com/jn/wp-content/uploads/2012/08/emerald-gemstone-300x200.jpg',
+			image: 'https://ezodiac.files.wordpress.com/2013/02/emerald-birthstones.jpg',
 			reviews: [
 				{
 					stars: 5,
@@ -63,7 +58,7 @@
 			description: "The Obi gem is known to have special mind reading powers.",
 			canPurchase: true,
 			soldOut: false,
-			image: 'http://gemstoneguru.com/wp-content/uploads/2013/04/Tanzanite-Gemstone.png',
+			image: 'http://fehrenbachjewelry.com/wp-content/uploads/gem_swissBlueTopaz.jpg',
 			reviews: [
 				{
 					stars: 5,
@@ -78,6 +73,11 @@
 			],
 		},
 	];
+
+	// Store Controller
+	app.controller('StoreController', function(){
+		this.products = gems;
+	});
 
 	// Tabbed Panel Controller
 	app.controller('PanelController', function(){
@@ -110,6 +110,13 @@
 		};
 	});
 
+	app.directive('productPanels', function(){
+		return {
+			restrict: 'E',
+			templateUrl: 'product-panels.html'
+		};
+	});
+
 	app.directive('productDescription', function(){
 		return {
 			restrict: 'E',
@@ -117,10 +124,10 @@
 		};
 	});
 
-	app.directive('productSpecifications', function(){
+	app.directive('productSpecs', function(){
 		return {
 			restrict: 'E',
-			templateUrl: 'product-specifications.html'
+			templateUrl: 'product-specs.html'
 		};
 	});
 

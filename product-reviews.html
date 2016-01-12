@@ -1,21 +1,31 @@
 <div class="panel" ng-show="panel.isSelected(3)">
+
 	<h3>Reviews</h3>
+
 	<blockquote ng-repeat="review in product.reviews">
+
 		<div class="review">
 			<b>Stars: {{review.stars}}</b><br>
 			<p>{{review.body}}</p><br>
 			<cite class="clearfix">by: {{review.author}} {{review.createdOn | date:'MM/dd/yyyy @ h:mma'}}</cite>
 		</div>
+
 	</blockquote>
+
 	<div class="review-block" ng-controller="ReviewController as reviewCtrl">
+
 		<blockquote class="review-preview ng-hide">
+
 			<div class="review">
 				<b>Stars: {{reviewCtrl.review.stars}}</b><br>
 				<p>{{reviewCtrl.review.body}}</p><br>
 				<cite>by: {{reviewCtrl.review.author}}</cite>
 			</div>
+			
 		</blockquote>
+
 		<form class="review-form" name="reviewForm" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
+			
 			<div>
 				Rate this product: 
 				<select class="form-select" ng-model="reviewCtrl.review.stars" required>
@@ -26,15 +36,20 @@
 					<option value="5">5 Stars</option>
 				</select>
 			</div>
+
 			<div>
 				<textarea class="form-textarea" ng-model="reviewCtrl.review.body" placeholder="Leave a message..." required></textarea>
 			</div>
+
 			<div class="form-author-submit">
 				<label>by: </label>
 				<input class="form-author" ng-model="reviewCtrl.review.author" placeholder="user@example.com" class="review-author" type="email" required>
 				<input class="submit-review" type="submit" value="submit">
 				<div>reviewForm is {{reviewForm.$valid}}</div>
 			</div>
+
 		</form>
+
 	</div>
+
 </div>
