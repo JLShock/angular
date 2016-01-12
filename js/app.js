@@ -37,7 +37,7 @@
 			description: "The Vader gem is known to have special strength powers.",
 			canPurchase: true,
 			soldOut: false,
-			image: 'http://www.catzia.com/SMCosplay-RedGemBrooch.jpg',
+			image: 'http://navneetgems.com/wp-content/uploads/2015/05/Indian-sparkly-garnet.jpg',
 			reviews: [
 				{
 					stars: 4,
@@ -58,7 +58,7 @@
 			description: "The Obi gem is known to have special mind reading powers.",
 			canPurchase: true,
 			soldOut: false,
-			image: 'http://fehrenbachjewelry.com/wp-content/uploads/gem_swissBlueTopaz.jpg',
+			image: 'http://www.salermojewelers.com/wp-content/uploads/2014/05/aqua.jpg',
 			reviews: [
 				{
 					stars: 5,
